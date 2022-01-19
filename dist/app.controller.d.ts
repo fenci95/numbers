@@ -5,4 +5,5 @@ export declare class AppController {
     get10Primes(): number[];
     getevenOrOdd(number: number): string;
     addNumbers(number1: number, number2: number): number;
+    healthcheck(): string;
 }

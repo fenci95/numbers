@@ -28,19 +28,22 @@ let AppController = class AppController {
     addNumbers(number1, number2) {
         return this.appService.addNumbers(number1, number2);
     }
+    healthcheck() {
+        return 'OK';
+    }
 };
 __decorate([
     (0, common_1.Get)('primes'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", Array)
+    __metadata("design:returntype", void 0)
 ], AppController.prototype, "get10Primes", null);
 __decorate([
     (0, common_1.Get)('evenorodd/:number'),
     __param(0, (0, common_1.Param)('number')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
-    __metadata("design:returntype", String)
+    __metadata("design:returntype", void 0)
 ], AppController.prototype, "getevenOrOdd", null);
 __decorate([
     (0, common_1.Get)('add/:number1/:number2'),
@@ -48,8 +51,14 @@ __decorate([
     __param(1, (0, common_1.Param)('number2')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number, Number]),
-    __metadata("design:returntype", Number)
+    __metadata("design:returntype", void 0)
 ], AppController.prototype, "addNumbers", null);
+__decorate([
+    (0, common_1.Get)('healthcheck'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", String)
+], AppController.prototype, "healthcheck", null);
 AppController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [app_service_1.AppService])

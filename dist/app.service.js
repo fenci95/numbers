@@ -16,7 +16,7 @@ let AppService = class AppService {
         return number % 2 === 0 ? 'Even' : 'Odd';
     }
     getPrimes() {
-        let arr = [2];
+        const arr = [2];
         let i = 3;
         while (arr.length < 10) {
             if (this.isPrime(i)) {
@@ -27,7 +27,7 @@ let AppService = class AppService {
         return arr;
     }
     isPrime(num) {
-        for (var i = 2; i < num; i++) {
+        for (let i = 2; i < num; i++) {
             if (num % i === 0) {
                 return false;
             }
